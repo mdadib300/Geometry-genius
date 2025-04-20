@@ -30,6 +30,7 @@
         <div class="flex m-6">
             <!-- Geometry Cards -->
             <div class="grid grid-cols-3 gap-5 w-3/4">
+                <!-- Triangle -->
                 <div class="card bg-base-100 shadow-sm">
                     <figure>
                         <img src="images/triangle.png" class="mt-5" />
@@ -38,19 +39,23 @@
                         <h2 class="card-title mx-auto">Triangle</h2>
                         <p class="mx-auto">Area (A) = 0.5 X b X h</p>
                         <div class="flex mx-auto">
-                            <input type="number" placeholder="b"
+                            <input id="triangle-base" type="number" placeholder="b"
                                 class="w-20 p-1 mr-2 border-none bg-gray-100 rounded-sm">
                             <p class="mr-3">cm</p>
-                            <input type="number" placeholder="h"
+                            <input id="triangle-height" type="number" placeholder="h"
                                 class="w-20 p-1 mr-2 border-none bg-gray-100 rounded-sm">
                             <p>cm</p>
                         </div>
                         <div class="card-actions justify-center mt-4">
-                            <button onclick="calculateTriangleArea()"
-                                class="btn btn-info btn-wide text-white">Calculate</button>
+                            <div>
+                                <p>Area: <span id="triangle-area">0</span> <span>cm<sup>2</sup></span></p>
+                            </div>
+                            <button onclick="calculateTriangleArea()" class="btn btn-info btn-wide text-white">Calculate
+                            </button>
                         </div>
                     </div>
                 </div>
+                <!-- Ellipse -->
                 <div class="card bg-base-100 shadow-sm">
                     <figure>
                         <img src="images/ellipse.png" class="mt-5" />
@@ -59,15 +64,18 @@
                         <h2 class="card-title mx-auto">Ellipse</h2>
                         <p class="mx-auto">Area (A) = πab</p>
                         <div class="flex mx-auto">
-                            <input type="number" placeholder="a"
+                            <input id="ellipse-a" type="number" placeholder="a"
                                 class="w-20 p-1 mr-2 border-none bg-gray-100 rounded-sm">
                             <p class="mr-3">cm</p>
-                            <input type="number" placeholder="b"
+                            <input id="ellipse-b" type="number" placeholder="b"
                                 class="w-20 p-1 mr-2 border-none bg-gray-100 rounded-sm">
                             <p>cm</p>
                         </div>
                         <div class="card-actions justify-center mt-4">
-                            <button onclick="calculateTriangleArea()"
+                            <div>
+                                <p>Area: <span id="ellipse-area">0</span> <span>cm<sup>2</sup></span></p>
+                            </div>
+                            <button onclick="calculateEllipseArea()"
                                 class="btn btn-info btn-wide text-white">Calculate</button>
                         </div>
                     </div>
@@ -88,8 +96,7 @@
                             <p>cm</p>
                         </div>
                         <div class="card-actions justify-center mt-4">
-                            <button onclick="calculateTriangleArea()"
-                                class="btn btn-info btn-wide text-white">Calculate</button>
+                            <button onclick="" class="btn btn-info btn-wide text-white">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -109,8 +116,7 @@
                             <p>cm</p>
                         </div>
                         <div class="card-actions justify-center mt-4">
-                            <button onclick="calculateTriangleArea()"
-                                class="btn btn-info btn-wide text-white">Calculate</button>
+                            <button onclick="" class="btn btn-info btn-wide text-white">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -130,8 +136,7 @@
                             <p>cm</p>
                         </div>
                         <div class="card-actions justify-center mt-4">
-                            <button onclick="calculateTriangleArea()"
-                                class="btn btn-info btn-wide text-white">Calculate</button>
+                            <button onclick="" class="btn btn-info btn-wide text-white">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -151,8 +156,7 @@
                             <p>cm</p>
                         </div>
                         <div class="card-actions justify-center mt-4">
-                            <button onclick="calculateTriangleArea()"
-                                class="btn btn-info btn-wide text-white">Calculate</button>
+                            <button onclick="" class="btn btn-info btn-wide text-white">Calculate</button>
                         </div>
                     </div>
                 </div>
